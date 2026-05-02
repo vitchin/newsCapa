@@ -1,14 +1,16 @@
 import requests as res
 from flask import Flask, render_template, request
 from datetime import datetime
+import os
 
 app = Flask(__name__)
 
-API_KEY = "a8ea83f2550941a5b5a757b5bbd6ca7a"
+API_KEY = os.getenv("NEWS_API_KEY", "a8ea83f2550941a5b5a757b5bbd6ca7a")
 BASE_URL = "https://newsapi.org/v2/everything" #ajustar o endpoint correto
 
 @app.route('/')
-def home():
+@app.route('/index.html')
+def index():
 
     sort_by = request.args.get('sortBy', 'publishedAt')
     pesquisa = request.args.get('q', '')
@@ -40,7 +42,7 @@ def home():
         noticias = []
 
 
-    return render_template('home.html', noticias=noticias, pesquisa=pesquisa, sort_by=sort_by)
+    return render_template('index.html', noticias=noticias, pesquisa=pesquisa, sort_by=sort_by)
 
 def date_formated(date_iso):
 
