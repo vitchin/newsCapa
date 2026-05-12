@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newscapa</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-blue-50 via-white to-indigo-100 min-h-screen py-10 px-4">
+    <div class="max-w-7xl w-full mx-auto bg-white rounded-2xl shadow-xl p-8">
+        <header class="mb-12 text-center">
+
+
+            <p class="text-2xl uppercase tracking-[0.3em] text-indigo-600 font-semibold">NEWSCAPA</p>
+            <h1 class="mt-4 text-5xl font-extrabold text-slate-900">Descubra as notícias mais importantes</h1>
+            <p class="mt-4 max-w-2xl mx-auto text-base text-slate-600">Use a busca para encontrar os principais destaques do dia. Na Newscapa, você encontra notícias de destaque ao redor do mundo!</p>
+        </header>
+
+        <form method="GET" action="/" class="relative mb-6">
+            <div class="w-full">
+                <label class="block text-sm font-semibold text-slate-700 mb-3">Pesquise notícias</label>
+                <div class="flex items-center gap-0">
+                    <button type="submit" class="inline-flex items-center justify-center bg-indigo-600 text-white w-20 h-14 rounded-t-right rounded-b-right shadow-sm hover:bg-indigo-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-300" aria-label="Buscar notícias">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                        </svg>
+                    </button>
+                    <input type="text" name="q" value="" placeholder="Pesquise por notícias e destaques..." class="w-full h-14 border-0 border-b-2 border-b-gray-300 bg-transparent px-4 py-3 focus:outline-none focus:ring-0 focus:border-b-indigo-500 transition-colors duration-200 placeholder:text-slate-400" autocomplete="off">
+                </div>
+                <div class="flex flex-col gap-0 mt-4">
+                    <label class="block text-sm font-semibold text-slate-700">Filtro:</label>
+                    <select name="sortBy" class="px-4 py-3 mt-0 w-[160px] border rounded-lg">
+                        <option value="publishedAt" selected>Mais recentes</option>
+                        <option value="relevancy" >Mais relevantes</option>
+                        <option value="popularity" >Popularidade</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+
+    <section class="mb-14">
+
+    <div class="mb-6 flex items-center justify-center">
+
+        <h2 class="text-3xl font-bold text-slate-900">
+            Notícias
+        </h2>
+
+    </div>
+
+    <div class="flex gap-6 overflow-x-auto pb-4 scrollbar-hide">
+
+
+
+    </div>
+
+</section>
+
+    </div>
+
+    <div class="mt-12 flex justify-center gap-6">
+        <a href="https://github.com/toaallthem" target="_blank" class="flex flex-col items-center align-center transition-transform hover:scale-110" title="Keven Lucas" aria-label="GitHub Repositório 1">
+            <img src="/static/img/GitHub_Invertocat_Black.svg" alt="GitHub Repositório 1" class="h-12 w-12">
+            <p class="text-sm text-slate-500">Keven Lucas</p>
+        </a>
+        <a href="https://github.com/vitchin" target="_blank" class="flex flex-col items-center align-center transition-transform hover:scale-110" title="Victor Ricardo" aria-label="GitHub Repositório 2">
+            <img src="/static/img/GitHub_Invertocat_Black.svg" alt="GitHub Repositório 2" class="h-12 w-12">
+            <p class="text-sm text-slate-500">Victor Ricardo</p>
+        </a>
+    </div>
+
+    <footer class="mt-8 text-center">
+        <p class="text-sm text-slate-500">© 2026 NEWSCAPA desenvolvido por Devnunes. Versão 1.0.0 <br>Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
